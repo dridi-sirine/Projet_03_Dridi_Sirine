@@ -23,6 +23,10 @@ III- Configure the environnement on Vagrantfile
     
     3- install docker
 
-IV- Configure an image nginx
+IV- Dockerizing nginx
 
     1-serveur nginx accesible by HTTP
+
+V- Test the image nginx:
+
+    docker run -d --name nginx_image -p 5003:80 dsirine/nginx_image
