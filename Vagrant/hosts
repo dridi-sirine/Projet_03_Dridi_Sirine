@@ -1,0 +1,5 @@
+[web]
+192.168.60.60
+
+[web:vars]
+user=mondomaine

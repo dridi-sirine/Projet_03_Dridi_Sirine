@@ -1,0 +1,18 @@
+---
+- name: Install a list of packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - openssh-server
+    - postfix
+- name: download Gitlab
+  get_url:
+    url: https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/xenial/gitlab-ce_10.5.7-ce.0_amd64.deb/download.deb
+    dest: content-disposition
+- name: Install Gitlab
+dpkg -i gitlab-ce_10.5.7-ce.0_amd64.deb 
+- name: configure the URL for the gitlab
+nano /etc/gitlab/gitlab.rb
+- name: re-configure gitlab
+gitlab-ctl reconfigure
