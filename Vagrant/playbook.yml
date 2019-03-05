@@ -1,8 +1,0 @@
---- 
-- 
-  hosts: localhost
-  name: test
-  tasks: 
-    - 
-      include_role: 
-        name: Gitlab
